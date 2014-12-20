@@ -10,6 +10,8 @@ function installToMediaWikiRoot {
 
 	cd $MW_INSTALL_PATH
 
+	composer init --stability dev
+
 	composer require 'phpunit/phpunit='$PHPU --prefer-source --update-with-dependencies
 	composer require mediawiki/semantic-bundle $SB --prefer-source --dev
 

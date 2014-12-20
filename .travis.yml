@@ -6,9 +6,13 @@ env:
 matrix:
   fast_finish: true
   include:
-    - env: DB=mysql; MW=1.23.5; $SB=@dev; TYPE=composer
+    - env: DB=mysql; MW=master; SB=2.1.*@dev; PHPU=4.2.* TYPE=composer
+      php: hhvm
+    - env: DB=sqlite; MW=master; SB=2.1.*@dev; TYPE=composer
+      php: 5.3
+    - env: DB=mysql; MW=1.23.5; SB=2.0.*@dev; TYPE=composer
       php: 5.5
-    - env: DB=sqlite; MW=1.23.5; $SB=@dev; TYPE=composer
+    - env: DB=sqlite; MW=1.23.5; SB=2.0.*@dev; TYPE=composer
       php: 5.4
   exclude:
     - env: THENEEDFORTHIS=FAIL

@@ -26,13 +26,13 @@ The recommended way to install Semantic Bundle is by using [Composer][composer].
 ```json
 {
 	"require": {
-		"mediawiki/semantic-bundle": "dev-master"
+		"mediawiki/semantic-bundle": "~2.1"
 	}
 }
 ```
 
 1. From your MediaWiki installation directory, execute
-   `composer require mediawiki/semantic-bundle:@dev`
+   `composer require mediawiki/semantic-bundle:~2.1`
 2. Navigate to _Special:Version_ on your wiki and verify that the package
    have been successfully installed.
 
