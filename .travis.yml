@@ -1,0 +1,24 @@
+language: php
+
+env:
+  - THENEEDFORTHIS=FAIL
+
+matrix:
+  fast_finish: true
+  include:
+    - env: DB=mysql; MW=1.23.5; $SB=@dev; TYPE=composer
+      php: 5.5
+    - env: DB=sqlite; MW=1.23.5; $SB=@dev; TYPE=composer
+      php: 5.4
+  exclude:
+    - env: THENEEDFORTHIS=FAIL
+
+install:
+  - bash ./build/travis/install-mediawiki.sh
+  - bash ./build/travis/install-semantic-bundle.sh
+
+before_script:
+  - bash ./build/travis/update-configuration-settings.sh
+
+script:
+  - bash ./build/travis/run-tests.sh

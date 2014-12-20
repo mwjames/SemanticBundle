@@ -1,0 +1,39 @@
+{
+	"name": "mediawiki/semantic-bundle",
+	"type": "mediawiki-extension",
+	"description": "Semantic Bundle packages extensions that depend on Semantic MediaWiki.",
+	"keywords": [
+		"SMW",
+		"Semantic MediaWiki",
+		"Wiki",
+		"MediaWiki"
+	],
+	"homepage": "https://semantic-mediawiki.org/wiki/Extension:Semantic_Bundle",
+	"license": "GPL-2.0+",
+	"authors": [],
+	"support": {},
+	"require": {
+		"php": ">=5.3.0",
+		"mediawiki/semantic-media-wiki": "1.9.2",
+		"mediawiki/semantic-result-formats": "1.9.*",
+		"mediawiki/semantic-extra-special-properties": "1.2.*",
+		"mediawiki/semantic-glossary": "1.1.*",
+		"mediawiki/semantic-maps": "3.0.*"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.9.2-dev"
+		}
+	},
+	"autoload": {
+		"files" : [
+			"SemanticBundle.php"
+		]
+	},
+	"config": {
+		"process-timeout": 0
+	},
+	"scripts": {
+		"phpunit": "php ../../tests/phpunit/phpunit.php -c phpunit.xml.dist"
+	}
+}
