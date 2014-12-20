@@ -15,7 +15,7 @@ call_user_func( function () {
 		die( '<b>Error:</b> This version of <a href="https://github.com/SemanticMediaWiki/SemanticBundle/">SemanticBundle</a> is only compatible with MediaWiki 1.19 or above. You need to upgrade MediaWiki first.' );
 	}
 
-	define( 'SB_VERSION', '2.1-dev' );
+	define( 'SB_VERSION', '2.0' );
 
 	// Register the extension
 	$GLOBALS[ 'wgExtensionCredits' ][ 'semantic' ][ ] = array(
